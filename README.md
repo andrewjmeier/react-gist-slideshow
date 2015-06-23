@@ -60,7 +60,5 @@ To build, watch and serve the examples (which will also watch the component sour
 
 ## License
 
-__PUT LICENSE HERE__
-
 Copyright (c) 2015 Andrew Meier.
 
