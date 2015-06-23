@@ -30,12 +30,12 @@ npm install react-gist-slideshow --save
 
 ## Usage
 
-__EXPLAIN USAGE HERE__
+Set the url for the gist that you would like to use as a slideshow. If the slideshow is not appearing, make sure that you have the height set for your [`<div>`].  
 
 ```
 var ReactGistSlideshow = require('react-gist-slideshow');
 
-<ReactGistSlideshow>Example</ReactGistSlideshow>
+<ReactGistSlideshow gist="https://gist.github.com/alexmcpherson/4ebc65db31cd2a2ce0e2" />
 ```
 
 ### Properties
