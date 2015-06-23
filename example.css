@@ -16,12 +16,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
-  padding: 1em;
-}
 .footer {
   margin-top: 50px;
   border-top: 1px solid #eee;

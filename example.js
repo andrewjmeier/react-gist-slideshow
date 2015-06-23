@@ -7,6 +7,7 @@ var ReactGistSlideshow = require('react-gist-slideshow');
 var styles = {
 	container: {
 		height: '100%',
+		width: '100%',
 		margin: '8px'
 	}
 };
