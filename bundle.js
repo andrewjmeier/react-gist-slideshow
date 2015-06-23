@@ -1,4 +1,4 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.ReactGistSlideshow = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 ace.define("ace/mode/doc_comment_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(acequire, exports, module) {
 "use strict";
 
@@ -35794,11 +35794,10 @@ var component = React.createClass({displayName: "component",
 
 module.exports = component;
 
-},{"react":undefined}],21:[function(require,module,exports){
-(function (global){
+},{"react":undefined}],"react-gist-slideshow":[function(require,module,exports){
 'use strict';
 
-var React = (typeof window !== "undefined" ? window.React : typeof global !== "undefined" ? global.React : null);
+var React = require('react');
 // var brace = require('brace');
 var AceEditor = require('react-ace');
 
@@ -36110,6 +36109,4 @@ module.exports = ReactGistSlideshow;
 
 // export default ReactGistSlideshow;
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"brace/mode/html":1,"brace/mode/java":2,"brace/mode/javascript":3,"brace/mode/objectivec":4,"brace/mode/python":5,"brace/mode/ruby":6,"brace/theme/monokai":7,"brace/theme/xcode":8,"jquery":12,"pagedown":15,"react-ace":16,"react-progressbar":20}]},{},[21])(21)
-});
+},{"brace/mode/html":1,"brace/mode/java":2,"brace/mode/javascript":3,"brace/mode/objectivec":4,"brace/mode/python":5,"brace/mode/ruby":6,"brace/theme/monokai":7,"brace/theme/xcode":8,"jquery":12,"pagedown":15,"react":undefined,"react-ace":16,"react-progressbar":20}]},{},[]);
