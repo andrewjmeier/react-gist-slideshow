@@ -1,6 +1,6 @@
 # react-gist-slideshow
 
-__COMPONENT DESCRIPTION GOES HERE__
+__A React component to show your gists in a slideshow__
 
 
 ## Demo & Examples
@@ -30,7 +30,7 @@ npm install react-gist-slideshow --save
 
 ## Usage
 
-Set the url for the gist that you would like to use as a slideshow. If the slideshow is not appearing, make sure that you have the height set for your [`<div>`].  
+Set the url for the gist that you would like to use as a slideshow. If the slideshow is not appearing, make sure that you have the height set for your `<div>`.  
 
 ```
 var ReactGistSlideshow = require('react-gist-slideshow');
@@ -38,14 +38,19 @@ var ReactGistSlideshow = require('react-gist-slideshow');
 <ReactGistSlideshow gist="https://gist.github.com/alexmcpherson/4ebc65db31cd2a2ce0e2" />
 ```
 
-### Properties
-
-* __DOCUMENT PROPERTIES HERE__
-
 ### Notes
 
-__ADDITIONAL USAGE NOTES__
+__Supported File Types__
 
+* JavaScript
+* HTML
+* Markdown
+* Objective-C
+* Ruby
+* Java
+* Python
+
+(other files types will still render in the text editor, but they will be lacking the proper syntax highlighting)
 
 ## Development (`src`, `lib` and the build process)
 
