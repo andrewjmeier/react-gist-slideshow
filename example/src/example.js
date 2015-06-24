@@ -6,8 +6,8 @@ var styles = {
   container: {
     height: '100%',
     width: '100%',
-    margin: '8px',
-  },
+    margin: '8px'
+  }
 };
 
 var App = React.createClass({
