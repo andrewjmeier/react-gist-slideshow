@@ -1,6 +1,6 @@
 {
   "name": "react-gist-slideshow",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "react-gist-slideshow",
   "main": "lib/ReactGistSlideshow.js",
   "author": "Andrew Meier",
