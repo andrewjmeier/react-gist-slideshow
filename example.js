@@ -3,7 +3,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 var React = require('react');
 var ReactGistSlideshow = require('react-gist-slideshow');
-require('brace/theme/tomorrow_night_eighties');
+require('brace/theme/vibrant_ink');
 
 var styles = {
 	container: {
@@ -20,118 +20,104 @@ var App = React.createClass({
 		return React.createElement(
 			'div',
 			{ style: styles.container },
-			React.createElement(ReactGistSlideshow, { gist: 'https://gist.github.com/andrewjmeier/9486b899f1b2114c267e', highlightActiveLine: 'true', theme: 'tomorrow_night_eighties' })
+			React.createElement(ReactGistSlideshow, { gist: 'https://gist.github.com/andrewjmeier/9486b899f1b2114c267e', highlightActiveLine: 'true', theme: 'vibrant_ink' })
 		);
 	}
 });
 
 React.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"brace/theme/tomorrow_night_eighties":2,"react":undefined,"react-gist-slideshow":undefined}],2:[function(require,module,exports){
-ace.define("ace/theme/tomorrow_night_eighties",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
+},{"brace/theme/vibrant_ink":2,"react":undefined,"react-gist-slideshow":undefined}],2:[function(require,module,exports){
+ace.define("ace/theme/vibrant_ink",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
 
 exports.isDark = true;
-exports.cssClass = "ace-tomorrow-night-eighties";
-exports.cssText = ".ace-tomorrow-night-eighties .ace_gutter {\
-background: #272727;\
-color: #CCC\
+exports.cssClass = "ace-vibrant-ink";
+exports.cssText = ".ace-vibrant-ink .ace_gutter {\
+background: #1a1a1a;\
+color: #BEBEBE\
 }\
-.ace-tomorrow-night-eighties .ace_print-margin {\
+.ace-vibrant-ink .ace_print-margin {\
 width: 1px;\
-background: #272727\
+background: #1a1a1a\
 }\
-.ace-tomorrow-night-eighties {\
-background-color: #2D2D2D;\
-color: #CCCCCC\
+.ace-vibrant-ink {\
+background-color: #0F0F0F;\
+color: #FFFFFF\
 }\
-.ace-tomorrow-night-eighties .ace_constant.ace_other,\
-.ace-tomorrow-night-eighties .ace_cursor {\
-color: #CCCCCC\
+.ace-vibrant-ink .ace_cursor {\
+color: #FFFFFF\
 }\
-.ace-tomorrow-night-eighties .ace_marker-layer .ace_selection {\
-background: #515151\
+.ace-vibrant-ink .ace_marker-layer .ace_selection {\
+background: #6699CC\
 }\
-.ace-tomorrow-night-eighties.ace_multiselect .ace_selection.ace_start {\
-box-shadow: 0 0 3px 0px #2D2D2D;\
+.ace-vibrant-ink.ace_multiselect .ace_selection.ace_start {\
+box-shadow: 0 0 3px 0px #0F0F0F;\
 border-radius: 2px\
 }\
-.ace-tomorrow-night-eighties .ace_marker-layer .ace_step {\
+.ace-vibrant-ink .ace_marker-layer .ace_step {\
 background: rgb(102, 82, 0)\
 }\
-.ace-tomorrow-night-eighties .ace_marker-layer .ace_bracket {\
+.ace-vibrant-ink .ace_marker-layer .ace_bracket {\
 margin: -1px 0 0 -1px;\
-border: 1px solid #6A6A6A\
+border: 1px solid #404040\
 }\
-.ace-tomorrow-night-bright .ace_stack {\
-background: rgb(66, 90, 44)\
+.ace-vibrant-ink .ace_marker-layer .ace_active-line {\
+background: #333333\
 }\
-.ace-tomorrow-night-eighties .ace_marker-layer .ace_active-line {\
-background: #393939\
+.ace-vibrant-ink .ace_gutter-active-line {\
+background-color: #333333\
 }\
-.ace-tomorrow-night-eighties .ace_gutter-active-line {\
-background-color: #393939\
+.ace-vibrant-ink .ace_marker-layer .ace_selected-word {\
+border: 1px solid #6699CC\
 }\
-.ace-tomorrow-night-eighties .ace_marker-layer .ace_selected-word {\
-border: 1px solid #515151\
+.ace-vibrant-ink .ace_invisible {\
+color: #404040\
 }\
-.ace-tomorrow-night-eighties .ace_invisible {\
-color: #6A6A6A\
+.ace-vibrant-ink .ace_keyword,\
+.ace-vibrant-ink .ace_meta {\
+color: #FF6600\
 }\
-.ace-tomorrow-night-eighties .ace_keyword,\
-.ace-tomorrow-night-eighties .ace_meta,\
-.ace-tomorrow-night-eighties .ace_storage,\
-.ace-tomorrow-night-eighties .ace_storage.ace_type,\
-.ace-tomorrow-night-eighties .ace_support.ace_type {\
-color: #CC99CC\
+.ace-vibrant-ink .ace_constant,\
+.ace-vibrant-ink .ace_constant.ace_character,\
+.ace-vibrant-ink .ace_constant.ace_character.ace_escape,\
+.ace-vibrant-ink .ace_constant.ace_other {\
+color: #339999\
 }\
-.ace-tomorrow-night-eighties .ace_keyword.ace_operator {\
-color: #66CCCC\
-}\
-.ace-tomorrow-night-eighties .ace_constant.ace_character,\
-.ace-tomorrow-night-eighties .ace_constant.ace_language,\
-.ace-tomorrow-night-eighties .ace_constant.ace_numeric,\
-.ace-tomorrow-night-eighties .ace_keyword.ace_other.ace_unit,\
-.ace-tomorrow-night-eighties .ace_support.ace_constant,\
-.ace-tomorrow-night-eighties .ace_variable.ace_parameter {\
-color: #F99157\
-}\
-.ace-tomorrow-night-eighties .ace_invalid {\
-color: #CDCDCD;\
-background-color: #F2777A\
-}\
-.ace-tomorrow-night-eighties .ace_invalid.ace_deprecated {\
-color: #CDCDCD;\
-background-color: #CC99CC\
-}\
-.ace-tomorrow-night-eighties .ace_fold {\
-background-color: #6699CC;\
-border-color: #CCCCCC\
-}\
-.ace-tomorrow-night-eighties .ace_entity.ace_name.ace_function,\
-.ace-tomorrow-night-eighties .ace_support.ace_function,\
-.ace-tomorrow-night-eighties .ace_variable {\
-color: #6699CC\
-}\
-.ace-tomorrow-night-eighties .ace_support.ace_class,\
-.ace-tomorrow-night-eighties .ace_support.ace_type {\
-color: #FFCC66\
-}\
-.ace-tomorrow-night-eighties .ace_heading,\
-.ace-tomorrow-night-eighties .ace_markup.ace_heading,\
-.ace-tomorrow-night-eighties .ace_string {\
+.ace-vibrant-ink .ace_constant.ace_numeric {\
 color: #99CC99\
 }\
-.ace-tomorrow-night-eighties .ace_comment {\
-color: #999999\
+.ace-vibrant-ink .ace_invalid,\
+.ace-vibrant-ink .ace_invalid.ace_deprecated {\
+color: #CCFF33;\
+background-color: #000000\
 }\
-.ace-tomorrow-night-eighties .ace_entity.ace_name.ace_tag,\
-.ace-tomorrow-night-eighties .ace_entity.ace_other.ace_attribute-name,\
-.ace-tomorrow-night-eighties .ace_meta.ace_tag,\
-.ace-tomorrow-night-eighties .ace_variable {\
-color: #F2777A\
+.ace-vibrant-ink .ace_fold {\
+background-color: #FFCC00;\
+border-color: #FFFFFF\
 }\
-.ace-tomorrow-night-eighties .ace_indent-guide {\
-background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ09NrYAgMjP4PAAtGAwchHMyAAAAAAElFTkSuQmCC) right repeat-y\
+.ace-vibrant-ink .ace_entity.ace_name.ace_function,\
+.ace-vibrant-ink .ace_support.ace_function,\
+.ace-vibrant-ink .ace_variable {\
+color: #FFCC00\
+}\
+.ace-vibrant-ink .ace_variable.ace_parameter {\
+font-style: italic\
+}\
+.ace-vibrant-ink .ace_string {\
+color: #66FF00\
+}\
+.ace-vibrant-ink .ace_string.ace_regexp {\
+color: #44B4CC\
+}\
+.ace-vibrant-ink .ace_comment {\
+color: #9933CC\
+}\
+.ace-vibrant-ink .ace_entity.ace_other.ace_attribute-name {\
+font-style: italic;\
+color: #99CC99\
+}\
+.ace-vibrant-ink .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYNDTc/oPAALPAZ7hxlbYAAAAAElFTkSuQmCC) right repeat-y\
 }";
 
 var dom = acequire("../lib/dom");
