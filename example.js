@@ -3,7 +3,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 var React = require('react');
 var ReactGistSlideshow = require('react-gist-slideshow');
-require('brace/theme/vibrant_ink');
+require('brace/theme/katzenmilch');
 
 var styles = {
 	container: {
@@ -20,104 +20,131 @@ var App = React.createClass({
 		return React.createElement(
 			'div',
 			{ style: styles.container },
-			React.createElement(ReactGistSlideshow, { gist: 'https://gist.github.com/andrewjmeier/9486b899f1b2114c267e', highlightActiveLine: 'true', theme: 'vibrant_ink' })
+			React.createElement(ReactGistSlideshow, { gist: 'https://gist.github.com/andrewjmeier/9486b899f1b2114c267e', theme: 'katzenmilch' })
 		);
 	}
 });
 
 React.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"brace/theme/vibrant_ink":2,"react":undefined,"react-gist-slideshow":undefined}],2:[function(require,module,exports){
-ace.define("ace/theme/vibrant_ink",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
+},{"brace/theme/katzenmilch":2,"react":undefined,"react-gist-slideshow":undefined}],2:[function(require,module,exports){
+ace.define("ace/theme/katzenmilch",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
 
-exports.isDark = true;
-exports.cssClass = "ace-vibrant-ink";
-exports.cssText = ".ace-vibrant-ink .ace_gutter {\
-background: #1a1a1a;\
-color: #BEBEBE\
+exports.isDark = false;
+exports.cssClass = "ace-katzenmilch";
+exports.cssText = ".ace-katzenmilch .ace_gutter,\
+.ace-katzenmilch .ace_gutter {\
+background: #e8e8e8;\
+color: #333\
 }\
-.ace-vibrant-ink .ace_print-margin {\
+.ace-katzenmilch .ace_print-margin {\
 width: 1px;\
-background: #1a1a1a\
+background: #e8e8e8\
 }\
-.ace-vibrant-ink {\
-background-color: #0F0F0F;\
-color: #FFFFFF\
+.ace-katzenmilch {\
+background-color: #f3f2f3;\
+color: rgba(15, 0, 9, 1.0)\
 }\
-.ace-vibrant-ink .ace_cursor {\
-color: #FFFFFF\
+.ace-katzenmilch .ace_cursor {\
+border-left: 2px solid #100011\
 }\
-.ace-vibrant-ink .ace_marker-layer .ace_selection {\
-background: #6699CC\
+.ace-katzenmilch .ace_overwrite-cursors .ace_cursor {\
+border-left: 0px;\
+border-bottom: 1px solid #100011\
 }\
-.ace-vibrant-ink.ace_multiselect .ace_selection.ace_start {\
-box-shadow: 0 0 3px 0px #0F0F0F;\
+.ace-katzenmilch .ace_marker-layer .ace_selection {\
+background: rgba(100, 5, 208, 0.27)\
+}\
+.ace-katzenmilch.ace_multiselect .ace_selection.ace_start {\
+box-shadow: 0 0 3px 0px #f3f2f3;\
 border-radius: 2px\
 }\
-.ace-vibrant-ink .ace_marker-layer .ace_step {\
-background: rgb(102, 82, 0)\
+.ace-katzenmilch .ace_marker-layer .ace_step {\
+background: rgb(198, 219, 174)\
 }\
-.ace-vibrant-ink .ace_marker-layer .ace_bracket {\
+.ace-katzenmilch .ace_marker-layer .ace_bracket {\
 margin: -1px 0 0 -1px;\
-border: 1px solid #404040\
+border: 1px solid #000000\
 }\
-.ace-vibrant-ink .ace_marker-layer .ace_active-line {\
-background: #333333\
+.ace-katzenmilch .ace_marker-layer .ace_active-line {\
+background: rgb(232, 242, 254)\
 }\
-.ace-vibrant-ink .ace_gutter-active-line {\
-background-color: #333333\
+.ace-katzenmilch .ace_gutter-active-line {\
+background-color: rgb(232, 242, 254)\
 }\
-.ace-vibrant-ink .ace_marker-layer .ace_selected-word {\
-border: 1px solid #6699CC\
+.ace-katzenmilch .ace_marker-layer .ace_selected-word {\
+border: 1px solid rgba(100, 5, 208, 0.27)\
 }\
-.ace-vibrant-ink .ace_invisible {\
-color: #404040\
+.ace-katzenmilch .ace_invisible {\
+color: #BFBFBF\
 }\
-.ace-vibrant-ink .ace_keyword,\
-.ace-vibrant-ink .ace_meta {\
-color: #FF6600\
+.ace-katzenmilch .ace_fold {\
+background-color: rgba(2, 95, 73, 0.97);\
+border-color: rgba(15, 0, 9, 1.0)\
 }\
-.ace-vibrant-ink .ace_constant,\
-.ace-vibrant-ink .ace_constant.ace_character,\
-.ace-vibrant-ink .ace_constant.ace_character.ace_escape,\
-.ace-vibrant-ink .ace_constant.ace_other {\
-color: #339999\
+.ace-katzenmilch .ace_keyword {\
+color: #674Aa8;\
+rbackground-color: rgba(163, 170, 216, 0.055)\
 }\
-.ace-vibrant-ink .ace_constant.ace_numeric {\
-color: #99CC99\
+.ace-katzenmilch .ace_constant.ace_language {\
+color: #7D7e52;\
+rbackground-color: rgba(189, 190, 130, 0.059)\
 }\
-.ace-vibrant-ink .ace_invalid,\
-.ace-vibrant-ink .ace_invalid.ace_deprecated {\
-color: #CCFF33;\
-background-color: #000000\
+.ace-katzenmilch .ace_constant.ace_numeric {\
+color: rgba(79, 130, 123, 0.93);\
+rbackground-color: rgba(119, 194, 187, 0.059)\
 }\
-.ace-vibrant-ink .ace_fold {\
-background-color: #FFCC00;\
-border-color: #FFFFFF\
+.ace-katzenmilch .ace_constant.ace_character,\
+.ace-katzenmilch .ace_constant.ace_other {\
+color: rgba(2, 95, 105, 1.0);\
+rbackground-color: rgba(127, 34, 153, 0.063)\
 }\
-.ace-vibrant-ink .ace_entity.ace_name.ace_function,\
-.ace-vibrant-ink .ace_support.ace_function,\
-.ace-vibrant-ink .ace_variable {\
-color: #FFCC00\
+.ace-katzenmilch .ace_support.ace_function {\
+color: #9D7e62;\
+rbackground-color: rgba(189, 190, 130, 0.039)\
 }\
-.ace-vibrant-ink .ace_variable.ace_parameter {\
-font-style: italic\
+.ace-katzenmilch .ace_support.ace_class {\
+color: rgba(239, 106, 167, 1.0);\
+rbackground-color: rgba(239, 106, 167, 0.063)\
 }\
-.ace-vibrant-ink .ace_string {\
-color: #66FF00\
+.ace-katzenmilch .ace_storage {\
+color: rgba(123, 92, 191, 1.0);\
+rbackground-color: rgba(139, 93, 223, 0.051)\
 }\
-.ace-vibrant-ink .ace_string.ace_regexp {\
-color: #44B4CC\
+.ace-katzenmilch .ace_invalid {\
+color: #DFDFD5;\
+rbackground-color: #CC1B27\
 }\
-.ace-vibrant-ink .ace_comment {\
-color: #9933CC\
+.ace-katzenmilch .ace_string {\
+color: #5a5f9b;\
+rbackground-color: rgba(170, 175, 219, 0.035)\
 }\
-.ace-vibrant-ink .ace_entity.ace_other.ace_attribute-name {\
+.ace-katzenmilch .ace_comment {\
 font-style: italic;\
-color: #99CC99\
+color: rgba(64, 79, 80, 0.67);\
+rbackground-color: rgba(95, 15, 255, 0.0078)\
 }\
-.ace-vibrant-ink .ace_indent-guide {\
-background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYNDTc/oPAALPAZ7hxlbYAAAAAElFTkSuQmCC) right repeat-y\
+.ace-katzenmilch .ace_entity.ace_name.ace_function,\
+.ace-katzenmilch .ace_variable {\
+color: rgba(2, 95, 73, 0.97);\
+rbackground-color: rgba(34, 255, 73, 0.12)\
+}\
+.ace-katzenmilch .ace_variable.ace_language {\
+color: #316fcf;\
+rbackground-color: rgba(58, 175, 255, 0.039)\
+}\
+.ace-katzenmilch .ace_variable.ace_parameter {\
+font-style: italic;\
+color: rgba(51, 150, 159, 0.87);\
+rbackground-color: rgba(5, 214, 249, 0.043)\
+}\
+.ace-katzenmilch .ace_entity.ace_other.ace_attribute-name {\
+color: rgba(73, 70, 194, 0.93);\
+rbackground-color: rgba(73, 134, 194, 0.035)\
+}\
+.ace-katzenmilch .ace_entity.ace_name.ace_tag {\
+color: #3976a2;\
+rbackground-color: rgba(73, 166, 210, 0.039)\
 }";
 
 var dom = acequire("../lib/dom");

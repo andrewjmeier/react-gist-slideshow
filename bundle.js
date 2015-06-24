@@ -35631,7 +35631,7 @@ module.exports = React.createClass({displayName: "exports",
     this.editor.setTheme('ace/theme/'+this.props.theme);
     this.editor.setFontSize(this.props.fontSize);
     this.editor.on('change', this.onChange);
-    this.editor.setValue(this.props.value);
+    this.editor.setValue(this.props.value, 1);
     this.editor.renderer.setShowGutter(this.props.showGutter);
     this.editor.setOption('maxLines', this.props.maxLines);
     this.editor.setOption('readOnly', this.props.readOnly);
@@ -35653,7 +35653,7 @@ module.exports = React.createClass({displayName: "exports",
     this.editor.setOption('highlightActiveLine', nextProps.highlightActiveLine);
     this.editor.setShowPrintMargin(nextProps.setShowPrintMargin);
     if (this.editor.getValue() !== nextProps.value) {
-      this.editor.setValue(nextProps.value);
+      this.editor.setValue(nextProps.value, 1);
     }
     this.editor.renderer.setShowGutter(nextProps.showGutter);
     if (nextProps.onLoad) {
@@ -35778,9 +35778,9 @@ var ReactGistSlideshow = React.createClass({
     return {
       theme: 'monokai',
       fontSize: 18,
-      readOnly: true,
-      showGutter: false,
-      highlightActiveLine: false
+      readOnly: 'true',
+      showGutter: 'false',
+      highlightActiveLine: 'false'
     };
   },
 
@@ -35941,23 +35941,6 @@ function createMarkup(e) {
   return { __html: e };
 };
 
-// React.render(
-//   <Slideshow gist="https://gist.github.com/alexmcpherson/4ebc65db31cd2a2ce0e2" />,
-//   document.getElementById('app')
-// );
-
-// React.render(
-//   <Slideshow gist="https://gist.github.com/robolson/1492306" />,
-//   document.getElementById('app')
-// );
-
 module.exports = ReactGistSlideshow;
-
-// React.render(
-//   <Slideshow gist="https://gist.github.com/robolson/d12e6d4027c09a5b341c" />,
-//   document.getElementById('app')
-// );
-
-// export default ReactGistSlideshow;
 
 },{"brace/mode/html":1,"brace/mode/java":2,"brace/mode/javascript":3,"brace/mode/objectivec":4,"brace/mode/python":5,"brace/mode/ruby":6,"brace/theme/monokai":7,"jquery":11,"pagedown":14,"react":undefined,"react-ace":15,"react-progressbar":19}]},{},[]);
