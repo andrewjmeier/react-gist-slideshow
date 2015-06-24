@@ -77,9 +77,9 @@ var ReactGistSlideshow = React.createClass({
     return {
       theme: 'monokai',
       fontSize: 18,
-      readOnly: true,
-      showGutter: false,
-      highlightActiveLine: false
+      readOnly: 'true',
+      showGutter: 'false',
+      highlightActiveLine: 'false'
     };
   },
 
@@ -171,7 +171,6 @@ var ReactGistSlideshow = React.createClass({
       codeType: type,
       completedPercent: perc
     });
-
       
   },
 
@@ -231,27 +230,6 @@ var ReactGistSlideshow = React.createClass({
 
 function createMarkup(e) { return {__html: e}; };
 
-
-
-// React.render(
-//   <Slideshow gist="https://gist.github.com/alexmcpherson/4ebc65db31cd2a2ce0e2" />,
-//   document.getElementById('app')
-// );
-
-// React.render(
-//   <Slideshow gist="https://gist.github.com/robolson/1492306" />,
-//   document.getElementById('app')
-// );
-
 module.exports = ReactGistSlideshow;
 
 
-// React.render(
-//   <Slideshow gist="https://gist.github.com/robolson/d12e6d4027c09a5b341c" />,
-//   document.getElementById('app')
-// );
-
-
-
-
-// export default ReactGistSlideshow;
