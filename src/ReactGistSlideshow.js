@@ -171,6 +171,8 @@ var ReactGistSlideshow = React.createClass({
       codeType: type,
       completedPercent: perc
     });
+
+      
   },
 
   handleKeyDown: function(e) {
@@ -208,7 +210,6 @@ var ReactGistSlideshow = React.createClass({
     }
   },
 
-
   render: function() {
     if (!this.state.gistArray || !this.state.gistArray[this.state.currentIndex]){
       return (<div>Unable to load gists from: {this.props.gist}. Check your URL and try again.</div>);
@@ -221,7 +222,6 @@ var ReactGistSlideshow = React.createClass({
         </div>
 
         <Progress completed={this.state.completedPercent} />
-
         {this.editorForType(this.state.codeType)}
 
       </div>
@@ -230,7 +230,6 @@ var ReactGistSlideshow = React.createClass({
 });
 
 function createMarkup(e) { return {__html: e}; };
-
 
 
 
