@@ -35780,7 +35780,8 @@ var ReactGistSlideshow = React.createClass({
       fontSize: 18,
       readOnly: 'true',
       showGutter: 'false',
-      highlightActiveLine: 'false'
+      highlightActiveLine: 'false',
+      gist: ''
     };
   },
 
@@ -35803,19 +35804,14 @@ var ReactGistSlideshow = React.createClass({
       }
       gists = gistsArray;
       var gist = gists[this.state.currentIndex];
-      var theurl = gist.raw_url;
       var type = gist.language;
 
-      jQ.get(theurl, (function (result2) {
-        this.setState({
-          codeText: result2 + '\n\n\n'
-        });
-      }).bind(this));
       if (this.isMounted()) {
         this.setState({
           gistArray: gists,
           currentIndex: 0,
-          codeType: type
+          codeType: type,
+          codeText: gist.content + '\n\n\n'
         });
       }
     }).bind(this));
@@ -35830,21 +35826,15 @@ var ReactGistSlideshow = React.createClass({
     }
 
     var gist = this.state.gistArray[index];
-    var theurl = gist.raw_url;
     var type = gist.language;
-
-    jQ.get(theurl, (function (result2) {
-      this.setState({
-        codeText: result2 + '\n\n\n'
-      });
-    }).bind(this));
 
     var perc = 100 * index / (this.state.gistArray.length - 1);
 
     this.setState({
       currentIndex: index,
       codeType: type,
-      completedPercent: perc
+      completedPercent: perc,
+      codeText: gist.content + '\n\n\n'
     });
   },
 
@@ -35856,21 +35846,15 @@ var ReactGistSlideshow = React.createClass({
     }
 
     var gist = this.state.gistArray[index];
-    var theurl = gist.raw_url;
     var type = gist.language;
-
-    jQ.get(theurl, (function (result2) {
-      this.setState({
-        codeText: result2 + '\n\n\n'
-      });
-    }).bind(this));
 
     var perc = 100 * index / (this.state.gistArray.length - 1);
 
     this.setState({
       currentIndex: index,
       codeType: type,
-      completedPercent: perc
+      completedPercent: perc,
+      codeText: gist.content + '\n\n\n'
     });
   },
 
@@ -35886,7 +35870,9 @@ var ReactGistSlideshow = React.createClass({
 
   editorForType: function editorForType(lang) {
     lang = lang.toLowerCase();
-
+    if (lang == 'objective-c') {
+      lang = 'objectivec';
+    }
     if (lang === 'markdown') {
       return React.createElement('div', { dangerouslySetInnerHTML: createMarkup(safeConverter.makeHtml(this.state.codeText)) });
     } else {
@@ -35894,9 +35880,9 @@ var ReactGistSlideshow = React.createClass({
         mode: lang,
         theme: this.props.theme,
         name: 'thename',
-        readOnly: 'true' == this.props.readOnly,
-        showGutter: 'true' == this.props.showGutter,
-        highlightActiveLine: 'true' == this.props.highlightActiveLine,
+        readOnly: this.props.readOnly === 'true',
+        showGutter: this.props.showGutter === 'true',
+        highlightActiveLine: this.props.highlightActiveLine === 'true',
         width: '100%',
         height: '100%',
         fontSize: Number(this.props.fontSize),
@@ -35939,7 +35925,7 @@ var ReactGistSlideshow = React.createClass({
 
 function createMarkup(e) {
   return { __html: e };
-};
+}
 
 module.exports = ReactGistSlideshow;
 
