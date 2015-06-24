@@ -20,7 +20,7 @@ var App = React.createClass({
 		return React.createElement(
 			'div',
 			{ style: styles.container },
-			React.createElement(ReactGistSlideshow, { gist: 'https://gist.github.com/alexmcpherson/4ebc65db31cd2a2ce0e2', highlightActiveLine: 'true', theme: 'tomorrow_night_eighties', fontSize: '40', readOnly: 'false' })
+			React.createElement(ReactGistSlideshow, { gist: 'https://gist.github.com/andrewjmeier/9486b899f1b2114c267e', highlightActiveLine: 'true', theme: 'tomorrow_night_eighties' })
 		);
 	}
 });
