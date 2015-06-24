@@ -170,7 +170,9 @@ var ReactGistSlideshow = React.createClass({
 
   editorForType: function(lang) {
     lang = lang.toLowerCase();
-
+    if (lang == 'objective-c') {
+      lang = 'objectivec';
+    }
     if (lang === 'markdown') {
       return (
         <div dangerouslySetInnerHTML={createMarkup(safeConverter.makeHtml(this.state.codeText))} />
