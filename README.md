@@ -35,7 +35,7 @@ Set the url for the gist that you would like to use as a slideshow. If the slide
 ```
 var ReactGistSlideshow = require('react-gist-slideshow');
 
-<ReactGistSlideshow gist="https://gist.github.com/alexmcpherson/4ebc65db31cd2a2ce0e2" />
+<ReactGistSlideshow gist="https://gist.github.com/andrewjmeier/9486b899f1b2114c267e" />
 ```
 
 ### Notes
