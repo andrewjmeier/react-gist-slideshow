@@ -35773,6 +35773,14 @@ var ReactGistSlideshow = React.createClass({
       completedPercent: 0
     };
   },
+  propTypes: {
+    fontSize: React.PropTypes.number,
+    gist: React.PropTypes.string,
+    highlightActiveLine: React.PropTypes.string,
+    readOnly: React.PropTypes.string,
+    showGutter: React.PropTypes.string,
+    theme: React.PropTypes.string
+  },
 
   getDefaultProps: function getDefaultProps() {
     return {
@@ -35789,7 +35797,7 @@ var ReactGistSlideshow = React.createClass({
     jQ(document.body).off('keydown', this.handleKeyDown);
   },
 
-  componentDidMount: function componentDidMount() {
+  componentWillMount: function componentWillMount() {
     jQ(document.body).on('keydown', this.handleKeyDown);
 
     var baseURL = 'https://api.github.com/gists/';
@@ -35870,7 +35878,7 @@ var ReactGistSlideshow = React.createClass({
 
   editorForType: function editorForType(lang) {
     lang = lang.toLowerCase();
-    if (lang == 'objective-c') {
+    if (lang === 'objective-c') {
       lang = 'objectivec';
     }
     if (lang === 'markdown') {
