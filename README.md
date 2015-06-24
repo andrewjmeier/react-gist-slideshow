@@ -52,6 +52,40 @@ __Supported File Types__
 
 (other files types will still render in the text editor, but they will be lacking the proper syntax highlighting)
 
+### Text Editor Style Options
+
+#### Theme
+
+The default theme is Monokai. Other themes can be added from [Brace](https://github.com/thlorenz/brace/tree/master/theme).  
+
+```
+require('brace/themes/xcode');
+...
+<ReactGistSlideshow gist="https://gist.github.com/example/1234" theme="xcode" />
+```
+
+#### Read-Only
+
+Set readOnly to false to allow editing of the code in the slides. 
+
+```
+<ReactGistSlideshow gist="https://gist.github.com/example/1234" readOnly="false" />
+```
+
+#### Show Gutter
+
+Show line numbers on the left side of the editor. 
+
+```
+<ReactGistSlideshow gist="https://gist.github.com/example/1234" showGutter="true" />
+```
+
+#### Highlight Active Line
+
+```
+<ReactGistSlideshow gist="https://gist.github.com/example/1234" highlightActiveLine="true" />
+```
+
 ## Development (`src`, `lib` and the build process)
 
 **NOTE:** The source code for the component is in `src`. A transpiled CommonJS version (generated with Babel) is available in `lib` for use with node.js, browserify and webpack. A UMD bundle is also built to `dist`, which can be included without the need for any build system.

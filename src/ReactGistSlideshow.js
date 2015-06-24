@@ -15,8 +15,10 @@ require('brace/mode/objectivec');
 require('brace/mode/ruby');
 require('brace/mode/java');
 require('brace/mode/python');
+
+
 require('brace/theme/monokai');
-require('brace/theme/xcode');
+
 
 
 
@@ -70,6 +72,16 @@ var ReactGistSlideshow = React.createClass({
     };
   },
 
+
+  getDefaultProps: function() {
+    return {
+      theme: 'monokai',
+      fontSize: 18,
+      readOnly: true,
+      showGutter: false,
+      highlightActiveLine: false
+    };
+  },
 
   componentWillUnMount: function() {
     jQ(document.body).off('keydown', this.handleKeyDown);
@@ -173,117 +185,33 @@ var ReactGistSlideshow = React.createClass({
   },
 
   editorForType: function(lang) {
-    if (lang === 'JavaScript') {
-      return (
-        <AceEditor
-          mode='javascript'
-          theme='monokai'
-          name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
-          width='100%'
-          height='100%'
-          fontSize={18}
-          value={this.state.codeText} />
-      );
-    } else if (lang === 'Markdown') {
+    lang = lang.toLowerCase();
+
+    if (lang === 'markdown') {
       return (
         <div dangerouslySetInnerHTML={createMarkup(safeConverter.makeHtml(this.state.codeText))} />
       );
-    } else if (lang === 'HTML') {
-      return (
-
-        <AceEditor
-          mode='html'
-          theme='monokai'
-          name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
-          width='100%'
-          height='100%'
-          fontSize={18}
-          value={this.state.codeText} />
-      );
-    } else if (lang === 'Ruby') {
+    } else {
       return (
         <AceEditor
-          mode='ruby'
-          theme='monokai'
+          mode={lang}
+          theme={this.props.theme}
           name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
+          readOnly={'true' == this.props.readOnly}
+          showGutter={'true' == this.props.showGutter}
+          highlightActiveLine={'true' == this.props.highlightActiveLine}
           width='100%'
           height='100%'
-          fontSize={18}
-          value={this.state.codeText} />
-      );
-    } else if (lang === 'Objective-C') {
-      return (
-        <AceEditor
-          mode='objectivec'
-          theme='monokai'
-          name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
-          width='100%'
-          height='100%'
-          fontSize={18}
-          value={this.state.codeText} />
-      );
-    } else if (lang === 'Java') {
-      return (
-        <AceEditor
-          mode='java'
-          theme='monokai'
-          name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
-          width='100%'
-          height='100%'
-          fontSize={18}
-          value={this.state.codeText} />
-      );
-    } else if (lang === 'Python') {
-      return (
-        <AceEditor
-          mode='python'
-          theme='monokai'
-          name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
-          width='100%'
-          height='100%'
-          fontSize={18}
-          value={this.state.codeText} />
-      );
-    }
-
-    else {
-      return (
-        <AceEditor
-          mode='objectivec'
-          theme='monokai'
-          name='thename'
-          readOnly={true}
-          showGutter={false}
-          highlightActiveLine={false}
-          height='100%'
-          width='100%'
-          fontSize={18}
+          fontSize={Number(this.props.fontSize)}
           value={this.state.codeText} />
       );
     }
   },
 
+
   render: function() {
     if (!this.state.gistArray || !this.state.gistArray[this.state.currentIndex]){
-      return (<div>loading...</div>);
+      return (<div>Unable to load gists from: {this.props.gist}. Check your URL and try again.</div>);
     }
     return (
       <div style={styles.container}>
