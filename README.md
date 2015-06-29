@@ -86,9 +86,6 @@ Show line numbers on the left side of the editor.
 <ReactGistSlideshow gist="https://gist.github.com/example/1234" highlightActiveLine="true" />
 ```
 
-### Highlight Bug
-
-There's a small "bug" where all of the text in the editor is highlighted for each slide. There's an open pull request for the editor [here](https://github.com/securingsincity/react-ace/pull/23). If the request hasn't been merged you can fix it yourself. It's only two lines of code. 
 
 ## Development (`src`, `lib` and the build process)
 

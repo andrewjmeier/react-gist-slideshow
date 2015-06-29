@@ -1,6 +1,6 @@
 {
   "name": "react-gist-slideshow",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "react-gist-slideshow",
   "main": "lib/ReactGistSlideshow.js",
   "author": "Andrew Meier",
@@ -18,10 +18,16 @@
   },
   "devDependencies": {
     "babel-eslint": "^3.1.14",
+    "brace": "^0.5.1",
     "eslint": "^0.22.1",
     "eslint-plugin-react": "^2.5.0",
+    "gulp": "^3.9.0",
+    "jquery": "^2.1.4",
+    "pagedown": "^1.1.0",
+    "react-ace": "^2.0.1",
     "react-component-gulp-tasks": "^0.7.0",
-    "gulp": "^3.9.0"
+    "react-progressbar": "^1.1.0",
+    "reactify": "^1.1.1"
   },
   "browserify-shim": {
     "react": "global:React"
